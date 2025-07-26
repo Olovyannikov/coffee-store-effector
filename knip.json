@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["src/app/main.tsx"],
+  "project": ["src/**/*.{ts,tsx,js,jsx,mjs}"],
+  "ignore": ["**/*.global.css", "**/*.d.ts", "**/index.ts"],
+  "vite": {
+    "config": ["vite.config.{js,mjs,ts,cjs,mts,cts}"]
+  },
+  "ignoreDependencies": [
+    "ua-parser-js",
+    "solidarity",
+    "eslint*",
+    "rollup*",
+    "stylelint*",
+    "@evilmartians*",
+    "@feature-sliced*",
+    "@vitest*",
+    "@effector/swc-plugin"
+  ]
+}
