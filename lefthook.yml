@@ -1,0 +1,25 @@
+pre-commit:
+  parallel: true
+  commands:
+    fsd:
+      run: pnpm run lint:fsd
+    eslint:
+      glob: '*.{ts,tsx,js,jsx}'
+      run: pnpm run lint:ts
+    stylelint:
+      glob: '*.{css}'
+      run: pnpm run lint:css {staged_files}
+    prettier:
+      run: pnpm exec prettier --write {staged_files} && git add {staged_files}
+    solidarity:
+      run: solidarity
+    circular:
+      run: pnpm exec madge --circular --extensions ts,tsx src
+    unit-test:
+      run: pnpm run test:unit
+
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: pnpm exec commitlint --edit $1
