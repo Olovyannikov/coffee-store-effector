@@ -1,8 +1,10 @@
 import type { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 
-import s from './RootLayout.module.css';
+import { appStarted } from '@/shared/services';
 
+import s from './RootLayout.module.css';
+appStarted();
 export const RootLayout = ({ children, title = 'Главная' }: PropsWithChildren<{ title?: string }>) => (
     <>
         <Helmet>
