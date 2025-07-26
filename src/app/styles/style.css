@@ -1,0 +1,5 @@
+@import url("@mantine/core/styles.css");
+@import url("@mantine/notifications/styles.css");
+@import url("general/_variables.css");
+@import url("./general/_fonts.css");
+@import url("general/_scaffoldings.css");

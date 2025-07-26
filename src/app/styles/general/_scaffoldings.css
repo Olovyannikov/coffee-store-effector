@@ -1,0 +1,9 @@
+body {
+    font: var(--font-body-p1);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}

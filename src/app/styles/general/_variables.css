@@ -1,0 +1,25 @@
+/* Sizes */
+:root {
+    --size-xxs: 4px;
+    --size-xs: 8px;
+    --size-sm: 12px;
+    --size-md: 16px;
+    --size-lg: 20px;
+    --size-xl: 24px;
+    --size-2xl: 28px;
+    --size-3xl: 32px;
+    --size-4xl: 40px;
+}
+
+/* Fonts */
+:root {
+    --font-family: "Nunito", "Helvetica", sans-serif;
+    --font-body-p1: 600 16px / 20px var(--font-family);
+    --font-body-s2: 600 9px / 14px var(--font-family);
+}
+
+/* Shadows */
+:root {
+    --elevation-3: 0 0 2px 0 rgb(40 41 61 / 4%), 0 -4px 8px 0 rgb(96 97 112 / 16%);
+    --elevation-4: 0 2px 4px 0 rgb(40 41 61 / 4%), 0 8px 16px 0 rgb(96 97 112 / 16%);
+}

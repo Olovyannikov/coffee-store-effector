@@ -14,7 +14,20 @@ export default defineConfig(({ mode }) => {
                 build: true,
                 outputDir: '.vite-inspect',
             }),
-            react(),
+            react({
+                plugins: [
+                    [
+                        '@effector/swc-plugin',
+                        {
+                            addNames: isDev,
+                            addLoc: isDev,
+                            hmr: isDev ? 'es' : false,
+                            debugSids: isDev,
+                            factories: ['./src/shared/factories', '@/shared/factories'],
+                        },
+                    ],
+                ],
+            }),
             svgr(),
             compression(),
         ],

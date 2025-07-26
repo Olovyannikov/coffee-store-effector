@@ -1,8 +1,8 @@
-import { builtinModules } from 'module';
-
+import { fixupPluginRules } from '@eslint/compat';
 import eslintJS from '@eslint/js';
 import typescriptParser from '@typescript-eslint/parser';
 import vitest from '@vitest/eslint-plugin';
+import effector from 'eslint-plugin-effector';
 import pluginImport from 'eslint-plugin-import';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import noOnlyTests from 'eslint-plugin-no-only-tests';
@@ -11,9 +11,8 @@ import eslintReact from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
+import { builtinModules } from 'node:module';
 import eslintTypescript from 'typescript-eslint';
-import { fixupPluginRules } from '@eslint/compat';
-import effector from 'eslint-plugin-effector';
 
 const nodeBuiltinModules = builtinModules.join('|');
 const ourOwnModules = [''].join('|');
@@ -231,7 +230,7 @@ export default eslintTypescript.config(
             'express-entry.ts',
             'vite.config.ts',
             'vitest.config.ts',
-            'pages/**/*',
+            'src/pages/**/*',
             'src/app/**/*',
         ],
         rules: {
@@ -254,12 +253,6 @@ export default eslintTypescript.config(
         files: ['tests/**/*.ts'],
         rules: {
             'react-hooks/rules-of-hooks': 'off',
-        },
-    },
-    {
-        files: ['express-entry.ts'],
-        rules: {
-            'no-console': 'off',
         },
     }
 );

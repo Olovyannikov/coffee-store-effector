@@ -1,0 +1,40 @@
+.root {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.inner {
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    opacity: 0.75;
+    inset: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 220px;
+
+    @media (width <= 768px) {
+        padding-top: 120px;
+    }
+}
+
+.title {
+    font-weight: 900;
+    font-size: 38px;
+    text-align: center;
+
+    @media (width <= 768px) {
+        font-size: 32px;
+    }
+}
+
+.description {
+    margin: var(--mantine-spacing-xl) auto calc(var(--mantine-spacing-xl) * 1.5);
+    max-width: 540px;
+}
